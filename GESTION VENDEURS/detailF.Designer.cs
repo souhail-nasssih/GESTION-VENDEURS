@@ -1,6 +1,6 @@
 ﻿namespace GESTION_VENDEURS
 {
-    partial class H_vents
+    partial class detailF
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(H_vents));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(detailF));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.txtdcc = new Guna.UI.WinForms.GunaTextBox();
             this.txtcinc = new Guna.UI.WinForms.GunaTextBox();
@@ -42,12 +39,12 @@
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.tablevents = new Guna.UI.WinForms.GunaDataGridView();
             this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             this.btn_consulter = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.tablevp = new System.Windows.Forms.DataGridView();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tablevents)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablevp)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -65,8 +62,8 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1078, 422);
-            this.guna2Panel1.TabIndex = 0;
+            this.guna2Panel1.Size = new System.Drawing.Size(1268, 470);
+            this.guna2Panel1.TabIndex = 2;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
             // txtdcc
@@ -87,7 +84,7 @@
             this.txtdcc.Radius = 15;
             this.txtdcc.ReadOnly = true;
             this.txtdcc.SelectedText = "";
-            this.txtdcc.Size = new System.Drawing.Size(298, 53);
+            this.txtdcc.Size = new System.Drawing.Size(488, 53);
             this.txtdcc.TabIndex = 7;
             // 
             // txtcinc
@@ -108,7 +105,7 @@
             this.txtcinc.Radius = 15;
             this.txtcinc.ReadOnly = true;
             this.txtcinc.SelectedText = "";
-            this.txtcinc.Size = new System.Drawing.Size(298, 53);
+            this.txtcinc.Size = new System.Drawing.Size(488, 53);
             this.txtcinc.TabIndex = 6;
             // 
             // txtncc
@@ -129,7 +126,7 @@
             this.txtncc.Radius = 15;
             this.txtncc.ReadOnly = true;
             this.txtncc.SelectedText = "";
-            this.txtncc.Size = new System.Drawing.Size(298, 53);
+            this.txtncc.Size = new System.Drawing.Size(488, 53);
             this.txtncc.TabIndex = 5;
             // 
             // txtnf
@@ -143,7 +140,7 @@
             this.txtnf.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtnf.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtnf.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnf.Location = new System.Drawing.Point(883, 22);
+            this.txtnf.Location = new System.Drawing.Point(1073, 22);
             this.txtnf.Name = "txtnf";
             this.txtnf.PasswordChar = '\0';
             this.txtnf.Radius = 15;
@@ -157,7 +154,7 @@
             this.gunaLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.gunaLabel4.AutoSize = true;
             this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel4.Location = new System.Drawing.Point(646, 35);
+            this.gunaLabel4.Location = new System.Drawing.Point(836, 35);
             this.gunaLabel4.Name = "gunaLabel4";
             this.gunaLabel4.Size = new System.Drawing.Size(204, 31);
             this.gunaLabel4.TabIndex = 3;
@@ -195,75 +192,12 @@
             // 
             // guna2Panel2
             // 
-            this.guna2Panel2.Controls.Add(this.tablevents);
+            this.guna2Panel2.Controls.Add(this.tablevp);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 422);
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1078, 341);
-            this.guna2Panel2.TabIndex = 1;
-            // 
-            // tablevents
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.tablevents.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.tablevents.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.tablevents.BackgroundColor = System.Drawing.Color.White;
-            this.tablevents.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tablevents.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.tablevents.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(185)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tablevents.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.tablevents.ColumnHeadersHeight = 50;
-            this.tablevents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tablevents.DefaultCellStyle = dataGridViewCellStyle3;
-            this.tablevents.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tablevents.EnableHeadersVisualStyles = false;
-            this.tablevents.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.tablevents.Location = new System.Drawing.Point(0, 0);
-            this.tablevents.Name = "tablevents";
-            this.tablevents.ReadOnly = true;
-            this.tablevents.RowHeadersVisible = false;
-            this.tablevents.RowHeadersWidth = 51;
-            this.tablevents.RowTemplate.Height = 50;
-            this.tablevents.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tablevents.Size = new System.Drawing.Size(1078, 341);
-            this.tablevents.TabIndex = 1;
-            this.tablevents.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
-            this.tablevents.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.tablevents.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.tablevents.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.tablevents.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.tablevents.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.tablevents.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.tablevents.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.tablevents.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(185)))), ((int)(((byte)(255)))));
-            this.tablevents.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.tablevents.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.tablevents.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.tablevents.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.tablevents.ThemeStyle.HeaderStyle.Height = 50;
-            this.tablevents.ThemeStyle.ReadOnly = true;
-            this.tablevents.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.tablevents.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.tablevents.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold);
-            this.tablevents.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.tablevents.ThemeStyle.RowsStyle.Height = 50;
-            this.tablevents.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.tablevents.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.tablevents.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablevents_CellContentClick);
+            this.guna2Panel2.Size = new System.Drawing.Size(1268, 830);
+            this.guna2Panel2.TabIndex = 3;
             // 
             // mySqlCommand1
             // 
@@ -293,7 +227,7 @@
             this.btn_consulter.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btn_consulter.ImageSize = new System.Drawing.Size(20, 20);
             this.btn_consulter.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btn_consulter.Location = new System.Drawing.Point(847, 279);
+            this.btn_consulter.Location = new System.Drawing.Point(1037, 279);
             this.btn_consulter.Name = "btn_consulter";
             this.btn_consulter.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_consulter.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -308,22 +242,34 @@
             this.btn_consulter.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btn_consulter.Click += new System.EventHandler(this.btn_consulter_Click);
             // 
-            // H_vents
+            // tablevp
+            // 
+            this.tablevp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablevp.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tablevp.Location = new System.Drawing.Point(0, 0);
+            this.tablevp.Name = "tablevp";
+            this.tablevp.RowHeadersWidth = 51;
+            this.tablevp.RowTemplate.Height = 24;
+            this.tablevp.Size = new System.Drawing.Size(1268, 830);
+            this.tablevp.TabIndex = 0;
+            this.tablevp.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablevp_CellContentClick);
+            // 
+            // detailF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1078, 763);
+            this.ClientSize = new System.Drawing.Size(1268, 830);
             this.ControlBox = false;
-            this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.guna2Panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "H_vents";
+            this.Name = "detailF";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.H_vents_Load);
+            this.Load += new System.EventHandler(this.detailF_Load_1);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tablevents)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablevp)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -331,10 +277,7 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
-        private Guna.UI.WinForms.GunaDataGridView tablevents;
-        private Guna.UI.WinForms.GunaLabel gunaLabel1;
+        private Guna.UI.WinForms.GunaAdvenceButton btn_consulter;
         private Guna.UI.WinForms.GunaTextBox txtdcc;
         private Guna.UI.WinForms.GunaTextBox txtcinc;
         private Guna.UI.WinForms.GunaTextBox txtncc;
@@ -342,6 +285,9 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel4;
         private Guna.UI.WinForms.GunaLabel gunaLabel3;
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
-        private Guna.UI.WinForms.GunaAdvenceButton btn_consulter;
+        private Guna.UI.WinForms.GunaLabel gunaLabel1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
+        private System.Windows.Forms.DataGridView tablevp;
     }
 }
