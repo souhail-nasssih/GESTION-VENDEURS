@@ -64,10 +64,10 @@
             this.placen.Location = new System.Drawing.Point(364, 52);
             this.placen.Name = "placen";
             this.placen.PasswordChar = '\0';
-            this.placen.Radius = 30;
+            this.placen.Radius = 20;
             this.placen.ReadOnly = true;
             this.placen.SelectedText = "";
-            this.placen.Size = new System.Drawing.Size(241, 61);
+            this.placen.Size = new System.Drawing.Size(386, 67);
             this.placen.TabIndex = 21;
             this.placen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -90,7 +90,7 @@
             this.txta.Radius = 10;
             this.txta.ReadOnly = true;
             this.txta.SelectedText = "";
-            this.txta.Size = new System.Drawing.Size(732, 46);
+            this.txta.Size = new System.Drawing.Size(833, 46);
             this.txta.TabIndex = 29;
             this.txta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txta.TextChanged += new System.EventHandler(this.txta_TextChanged);
@@ -114,7 +114,7 @@
             this.txtt.Radius = 10;
             this.txtt.ReadOnly = true;
             this.txtt.SelectedText = "";
-            this.txtt.Size = new System.Drawing.Size(732, 46);
+            this.txtt.Size = new System.Drawing.Size(833, 46);
             this.txtt.TabIndex = 28;
             this.txtt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -137,9 +137,10 @@
             this.txtcin.Radius = 10;
             this.txtcin.ReadOnly = true;
             this.txtcin.SelectedText = "";
-            this.txtcin.Size = new System.Drawing.Size(732, 46);
+            this.txtcin.Size = new System.Drawing.Size(833, 46);
             this.txtcin.TabIndex = 27;
             this.txtcin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtcin.TextChanged += new System.EventHandler(this.txtcin_TextChanged);
             // 
             // txtn
             // 
@@ -160,7 +161,7 @@
             this.txtn.Radius = 10;
             this.txtn.ReadOnly = true;
             this.txtn.SelectedText = "";
-            this.txtn.Size = new System.Drawing.Size(732, 46);
+            this.txtn.Size = new System.Drawing.Size(833, 46);
             this.txtn.TabIndex = 26;
             this.txtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -169,7 +170,7 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.SystemColors.Control;
+            this.label4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.label4.Location = new System.Drawing.Point(51, 321);
@@ -183,7 +184,7 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.SystemColors.Control;
+            this.label3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.label3.Location = new System.Drawing.Point(58, 269);
@@ -197,7 +198,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.Control;
+            this.label2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.label2.Location = new System.Drawing.Point(51, 219);
@@ -211,7 +212,7 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.Control;
+            this.label1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.label1.Location = new System.Drawing.Point(51, 164);
@@ -222,6 +223,7 @@
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.guna2Panel1.Controls.Add(this.placen);
             this.guna2Panel1.Controls.Add(this.txta);
             this.guna2Panel1.Controls.Add(this.label1);
@@ -234,7 +236,7 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(966, 392);
+            this.guna2Panel1.Size = new System.Drawing.Size(1067, 392);
             this.guna2Panel1.TabIndex = 30;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
@@ -278,7 +280,7 @@
             this.tableproduits.RowHeadersWidth = 51;
             this.tableproduits.RowTemplate.Height = 50;
             this.tableproduits.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tableproduits.Size = new System.Drawing.Size(966, 234);
+            this.tableproduits.Size = new System.Drawing.Size(1067, 234);
             this.tableproduits.TabIndex = 31;
             this.tableproduits.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.tableproduits.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -321,7 +323,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(966, 626);
+            this.ClientSize = new System.Drawing.Size(1067, 626);
             this.ControlBox = false;
             this.Controls.Add(this.tableproduits);
             this.Controls.Add(this.guna2Panel1);

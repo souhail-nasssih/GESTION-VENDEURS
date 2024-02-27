@@ -60,12 +60,17 @@ namespace GESTION_VENDEURS
             string adresseVendeur = infos[1].Split(':')[1].Trim();
             string telVendeur = infos[2].Split(':')[1].Trim();
             string cinVendeur = infos[3].Split(':')[1].Trim();
+            string id = infos[4].Split(':')[1].Trim();
 
             // Afficher les informations du vendeur dans les TextBox et le contrôle de texte appropriés
             txtn.Text = nomVendeur;
             txta.Text = adresseVendeur;
             txtt.Text = telVendeur;
             txtcin.Text = cinVendeur;
+            //plxtid.Text = id;
+
+            Global.TxtIdValue = Convert.ToInt32(id);
+
         }
 
         private void AjouterProduitDansTableau(string info)
@@ -74,12 +79,21 @@ namespace GESTION_VENDEURS
             string[] infos = info.Split(',');
 
             // Extraire le produit et sa quantité
-            string produit = infos[4].Split(':')[1].Trim();
-            string qte = infos[5].Split(':')[1].Trim();
+            string produit = infos[5].Split(':')[1].Trim();
+            string qte = infos[6].Split(':')[1].Trim();
 
             // Ajouter le produit et sa quantité dans le DataGridView
             tableproduits.Rows.Add(produit, qte);
         }
 
+        private void txtid_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtcin_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

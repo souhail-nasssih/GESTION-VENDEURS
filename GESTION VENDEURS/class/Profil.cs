@@ -13,12 +13,23 @@ namespace GESTION_VENDEURS.classe
 {
     internal class Profil
     {
+
+
+
+
+        public string cinVendeur { get; private set; }
+
+
+
+
+        public int id;
         private string nomPlace;
         private GESTION_VENDEURS.Profil formProfil;
         public Profil(string nomPlace, GESTION_VENDEURS.Profil formProfil) // Ajoutez les arguments nécessaires
         {
             this.nomPlace = nomPlace;
             this.formProfil = formProfil;
+
         }
 
         public List<string> Info()
@@ -29,7 +40,7 @@ namespace GESTION_VENDEURS.classe
                 try
                 {
                     connection.Open();
-                    string query = @"SELECT c.NomClient, c.AdresseClient, c.tel, c.N_identif, pr.NomProduit, f.QuantiteEntrer
+                    string query = @"SELECT c.NomClient, c.IDClient, c.AdresseClient, c.tel, c.N_identif, pr.NomProduit, f.QuantiteEntrer
                             FROM fromentrer f
                             JOIN clients c ON f.IDClient = c.IDClient
                             JOIN produits pr ON f.IDProduit = pr.IDProduit
@@ -55,11 +66,12 @@ namespace GESTION_VENDEURS.classe
                                 string nomVendeur = reader["NomClient"].ToString();
                                 string adresseVendeur = reader["AdresseClient"].ToString();
                                 string telVendeur = reader["tel"].ToString();
-                                string cinVendeur = reader["N_identif"].ToString();
+                                Global.cinVendeur = reader["N_identif"].ToString();
+                                     id = reader.GetInt32(reader.GetOrdinal("IDClient"));
                                 string nomprouit = reader["NomProduit"].ToString();
                                 string qte = reader["QuantiteEntrer"].ToString();
 
-                                string infoVendeur = $"Nom vendeur: {nomVendeur}, Adresse: {adresseVendeur}, Tel: {telVendeur},CIN : {cinVendeur},Nom Produit : {nomprouit},Qte : {qte} ";
+                                string infoVendeur = $"Nom vendeur: {nomVendeur}, Adresse: {adresseVendeur}, Tel: {telVendeur},CIN : {Global.cinVendeur},ID: {id},Nom Produit : {nomprouit},Qte : {qte} ";
                                 informationsVendeurs.Add(infoVendeur);
                             }
                         }
@@ -71,9 +83,9 @@ namespace GESTION_VENDEURS.classe
                 }
             }
 
-            return informationsVendeurs;
+            return informationsVendeurs ;
         }
-
+        
 
 
         // Modifier la fonction Info pour qu'elle retourne une liste de tuples

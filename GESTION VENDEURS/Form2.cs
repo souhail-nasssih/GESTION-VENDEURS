@@ -14,10 +14,10 @@ namespace GESTION_VENDEURS
     public partial class Form2 : Form
     {
         public Form2()
-        {
+        {   
             InitializeComponent();
 
-        }
+        }   
 
         public static class PlaceManager
         {
@@ -54,7 +54,7 @@ namespace GESTION_VENDEURS
                 MessageBox.Show("La place est occupée.", "Place Occupée", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 // Passer le nom de place au tableau de bord lors de sa création
                 Form1 d = new Form1();
-                d.Show();
+                d.Show(); 
                 this.Hide();
 
             }

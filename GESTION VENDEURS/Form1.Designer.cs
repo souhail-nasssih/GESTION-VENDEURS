@@ -30,13 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
+            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.gunaControlBox1 = new Guna.UI.WinForms.GunaControlBox();
             this.gunaControlBox2 = new Guna.UI.WinForms.GunaControlBox();
+            this.gunaControlBox1 = new Guna.UI.WinForms.GunaControlBox();
             this.pnlC = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
@@ -65,6 +65,13 @@
             this.panel1.Size = new System.Drawing.Size(294, 742);
             this.panel1.TabIndex = 0;
             // 
+            // guna2Separator1
+            // 
+            this.guna2Separator1.Location = new System.Drawing.Point(12, 149);
+            this.guna2Separator1.Name = "guna2Separator1";
+            this.guna2Separator1.Size = new System.Drawing.Size(269, 10);
+            this.guna2Separator1.TabIndex = 3;
+            // 
             // gunaLabel1
             // 
             this.gunaLabel1.AutoSize = true;
@@ -75,13 +82,6 @@
             this.gunaLabel1.Size = new System.Drawing.Size(74, 28);
             this.gunaLabel1.TabIndex = 2;
             this.gunaLabel1.Text = "BioVita";
-            // 
-            // guna2Separator1
-            // 
-            this.guna2Separator1.Location = new System.Drawing.Point(12, 149);
-            this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(269, 10);
-            this.guna2Separator1.TabIndex = 3;
             // 
             // guna2DragControl1
             // 
@@ -100,23 +100,6 @@
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(720, 73);
             this.guna2CustomGradientPanel1.TabIndex = 1;
             // 
-            // gunaControlBox1
-            // 
-            this.gunaControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaControlBox1.AnimationHoverSpeed = 0.07F;
-            this.gunaControlBox1.AnimationSpeed = 0.03F;
-            this.gunaControlBox1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaControlBox1.IconColor = System.Drawing.Color.Black;
-            this.gunaControlBox1.IconSize = 15F;
-            this.gunaControlBox1.Location = new System.Drawing.Point(662, 0);
-            this.gunaControlBox1.Name = "gunaControlBox1";
-            this.gunaControlBox1.OnHoverBackColor = System.Drawing.Color.Red;
-            this.gunaControlBox1.OnHoverIconColor = System.Drawing.Color.White;
-            this.gunaControlBox1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaControlBox1.Size = new System.Drawing.Size(58, 37);
-            this.gunaControlBox1.TabIndex = 0;
-            this.gunaControlBox1.Click += new System.EventHandler(this.gunaControlBox1_Click);
-            // 
             // gunaControlBox2
             // 
             this.gunaControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -134,6 +117,23 @@
             this.gunaControlBox2.Size = new System.Drawing.Size(58, 37);
             this.gunaControlBox2.TabIndex = 1;
             this.gunaControlBox2.Click += new System.EventHandler(this.gunaControlBox2_Click);
+            // 
+            // gunaControlBox1
+            // 
+            this.gunaControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.gunaControlBox1.AnimationHoverSpeed = 0.07F;
+            this.gunaControlBox1.AnimationSpeed = 0.03F;
+            this.gunaControlBox1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaControlBox1.IconColor = System.Drawing.Color.Black;
+            this.gunaControlBox1.IconSize = 15F;
+            this.gunaControlBox1.Location = new System.Drawing.Point(662, 0);
+            this.gunaControlBox1.Name = "gunaControlBox1";
+            this.gunaControlBox1.OnHoverBackColor = System.Drawing.Color.Red;
+            this.gunaControlBox1.OnHoverIconColor = System.Drawing.Color.White;
+            this.gunaControlBox1.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaControlBox1.Size = new System.Drawing.Size(58, 37);
+            this.gunaControlBox1.TabIndex = 0;
+            this.gunaControlBox1.Click += new System.EventHandler(this.gunaControlBox1_Click);
             // 
             // pnlC
             // 
@@ -164,7 +164,8 @@
             this.guna2Button5.Name = "guna2Button5";
             this.guna2Button5.Size = new System.Drawing.Size(294, 82);
             this.guna2Button5.TabIndex = 8;
-            this.guna2Button5.Text = "Deconnecter";
+            this.guna2Button5.Text = "Sortir";
+            this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
             // 
             // guna2Button4
             // 
@@ -186,6 +187,7 @@
             this.guna2Button4.Size = new System.Drawing.Size(284, 45);
             this.guna2Button4.TabIndex = 7;
             this.guna2Button4.Text = "Vents";
+            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
             // guna2Button3
             // 
@@ -228,6 +230,7 @@
             this.guna2Button2.Size = new System.Drawing.Size(284, 45);
             this.guna2Button2.TabIndex = 5;
             this.guna2Button2.Text = "CLients";
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // guna2Button1
             // 
@@ -304,7 +307,7 @@
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private Guna.UI.WinForms.GunaControlBox gunaControlBox2;
         private Guna.UI.WinForms.GunaControlBox gunaControlBox1;
-        private Guna.UI2.WinForms.Guna2Panel pnlC;
+        public Guna.UI2.WinForms.Guna2Panel pnlC;
     }
 }
 

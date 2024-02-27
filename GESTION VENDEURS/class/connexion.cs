@@ -22,8 +22,8 @@ internal class connexion
             if (cnx.State == System.Data.ConnectionState.Closed)
             {
                 cnx.Open();
-                Console.WriteLine("Connexion à la base de données ouverte avec succès.");
-                MessageBox.Show("Connexion à la base de données ouverte avec succès.", "Gestion Restaurant");
+               // Console.WriteLine("Connexion à la base de données ouverte avec succès.");
+               // MessageBox.Show("Connexion à la base de données ouverte avec succès.", "Gestion Restaurant");
             }
         }
         catch (Exception ex)
@@ -41,8 +41,8 @@ internal class connexion
             if (cnx.State == System.Data.ConnectionState.Open)
             {
                 cnx.Close();
-                Console.WriteLine("Connexion à la base de données fermée avec succès.");
-                MessageBox.Show("Connexion à la base de données fermer avec succès.", "Gestion Restaurant");
+              //  Console.WriteLine("Connexion à la base de données fermée avec succès.");
+              //  MessageBox.Show("Connexion à la base de données fermer avec succès.", "Gestion Restaurant");
             }
         }
         catch (Exception ex)
