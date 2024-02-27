@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(H_vents));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(H_vents));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btn_consulter = new Guna.UI.WinForms.GunaAdvenceButton();
             this.txtdcc = new Guna.UI.WinForms.GunaTextBox();
             this.txtcinc = new Guna.UI.WinForms.GunaTextBox();
             this.txtncc = new Guna.UI.WinForms.GunaTextBox();
@@ -41,10 +42,9 @@
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.tablevents = new Guna.UI.WinForms.GunaDataGridView();
-            this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
-            this.btn_consulter = new Guna.UI.WinForms.GunaAdvenceButton();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablevents)).BeginInit();
@@ -69,6 +69,42 @@
             this.guna2Panel1.TabIndex = 0;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
+            // btn_consulter
+            // 
+            this.btn_consulter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_consulter.AnimationHoverSpeed = 0.07F;
+            this.btn_consulter.AnimationSpeed = 0.03F;
+            this.btn_consulter.BackColor = System.Drawing.Color.Transparent;
+            this.btn_consulter.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.btn_consulter.BorderColor = System.Drawing.Color.Black;
+            this.btn_consulter.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.btn_consulter.CheckedBorderColor = System.Drawing.Color.Black;
+            this.btn_consulter.CheckedForeColor = System.Drawing.Color.White;
+            this.btn_consulter.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btn_consulter.CheckedImage")));
+            this.btn_consulter.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.btn_consulter.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_consulter.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_consulter.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_consulter.ForeColor = System.Drawing.Color.White;
+            this.btn_consulter.Image = null;
+            this.btn_consulter.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_consulter.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_consulter.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btn_consulter.Location = new System.Drawing.Point(847, 279);
+            this.btn_consulter.Name = "btn_consulter";
+            this.btn_consulter.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_consulter.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_consulter.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_consulter.OnHoverImage = null;
+            this.btn_consulter.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btn_consulter.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_consulter.Radius = 20;
+            this.btn_consulter.Size = new System.Drawing.Size(196, 63);
+            this.btn_consulter.TabIndex = 45;
+            this.btn_consulter.Text = "Consulter ";
+            this.btn_consulter.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_consulter.Click += new System.EventHandler(this.btn_consulter_Click);
+            // 
             // txtdcc
             // 
             this.txtdcc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -89,6 +125,7 @@
             this.txtdcc.SelectedText = "";
             this.txtdcc.Size = new System.Drawing.Size(298, 53);
             this.txtdcc.TabIndex = 7;
+            this.txtdcc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtcinc
             // 
@@ -110,6 +147,7 @@
             this.txtcinc.SelectedText = "";
             this.txtcinc.Size = new System.Drawing.Size(298, 53);
             this.txtcinc.TabIndex = 6;
+            this.txtcinc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtncc
             // 
@@ -131,6 +169,7 @@
             this.txtncc.SelectedText = "";
             this.txtncc.Size = new System.Drawing.Size(298, 53);
             this.txtncc.TabIndex = 5;
+            this.txtncc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtnf
             // 
@@ -151,6 +190,7 @@
             this.txtnf.SelectedText = "";
             this.txtnf.Size = new System.Drawing.Size(160, 57);
             this.txtnf.TabIndex = 4;
+            this.txtnf.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // gunaLabel4
             // 
@@ -192,6 +232,13 @@
             this.gunaLabel1.Size = new System.Drawing.Size(154, 31);
             this.gunaLabel1.TabIndex = 0;
             this.gunaLabel1.Text = "Nom Client : ";
+            // 
+            // mySqlCommand1
+            // 
+            this.mySqlCommand1.CacheAge = 0;
+            this.mySqlCommand1.Connection = null;
+            this.mySqlCommand1.EnableCaching = false;
+            this.mySqlCommand1.Transaction = null;
             // 
             // guna2Panel2
             // 
@@ -265,49 +312,6 @@
             this.tablevents.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.tablevents.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablevents_CellContentClick);
             // 
-            // mySqlCommand1
-            // 
-            this.mySqlCommand1.CacheAge = 0;
-            this.mySqlCommand1.Connection = null;
-            this.mySqlCommand1.EnableCaching = false;
-            this.mySqlCommand1.Transaction = null;
-            // 
-            // btn_consulter
-            // 
-            this.btn_consulter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_consulter.AnimationHoverSpeed = 0.07F;
-            this.btn_consulter.AnimationSpeed = 0.03F;
-            this.btn_consulter.BackColor = System.Drawing.Color.Transparent;
-            this.btn_consulter.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.btn_consulter.BorderColor = System.Drawing.Color.Black;
-            this.btn_consulter.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.btn_consulter.CheckedBorderColor = System.Drawing.Color.Black;
-            this.btn_consulter.CheckedForeColor = System.Drawing.Color.White;
-            this.btn_consulter.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btn_consulter.CheckedImage")));
-            this.btn_consulter.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.btn_consulter.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_consulter.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_consulter.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_consulter.ForeColor = System.Drawing.Color.White;
-            this.btn_consulter.Image = null;
-            this.btn_consulter.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btn_consulter.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_consulter.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btn_consulter.Location = new System.Drawing.Point(847, 279);
-            this.btn_consulter.Name = "btn_consulter";
-            this.btn_consulter.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btn_consulter.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_consulter.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_consulter.OnHoverImage = null;
-            this.btn_consulter.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btn_consulter.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_consulter.Radius = 20;
-            this.btn_consulter.Size = new System.Drawing.Size(196, 63);
-            this.btn_consulter.TabIndex = 45;
-            this.btn_consulter.Text = "Consulter ";
-            this.btn_consulter.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btn_consulter.Click += new System.EventHandler(this.btn_consulter_Click);
-            // 
             // H_vents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -331,9 +335,6 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
-        private Guna.UI.WinForms.GunaDataGridView tablevents;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private Guna.UI.WinForms.GunaTextBox txtdcc;
         private Guna.UI.WinForms.GunaTextBox txtcinc;
@@ -343,5 +344,8 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel3;
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
         private Guna.UI.WinForms.GunaAdvenceButton btn_consulter;
+        private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private Guna.UI.WinForms.GunaDataGridView tablevents;
     }
 }

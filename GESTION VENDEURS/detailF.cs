@@ -17,13 +17,15 @@ namespace GESTION_VENDEURS
         public string NomClient { get; set; }
         public string CinClient { get; set; }
         public string DateVente { get; set; }
+       // private BindingSource bindingSource = new BindingSource();
 
 
 
         public detailF()
         {
             InitializeComponent();
-           
+           // tablevp.DataSource = bindingSource;
+
 
         }
 
@@ -40,6 +42,8 @@ namespace GESTION_VENDEURS
             txtncc.Text = NomClient;
             txtnf.Text =Convert.ToString(FactureId);
             txtdcc.Text = DateVente;
+            AfficherVentesFacture();
+
 
 
 
@@ -51,20 +55,17 @@ namespace GESTION_VENDEURS
             try
             {
                 const string query = @"
-                    SELECT 
-                        v.idvent,
-                        v.date_vent AS 'Date',
-                        v.qte AS 'Quantité',
-                        Prix AS 'Prix (Kg) /DH',
-                        v.prixtotal AS 'Prix Total /DH',
-                        p.NomProduit AS 'Nom Produit',
-                        (SELECT SUM(prixtotal) FROM ventes WHERE facture_id = @factureId) AS PrixNet
-                    FROM 
-                        ventes v
-                    JOIN 
-                        produits p ON p.IDProduit = v.produit_id
-                    WHERE 
-                        v.facture_id = @factureId";
+            SELECT 
+                p.NomProduit AS 'Nom Produit',
+                v.qte AS 'Quantité',
+                Prix AS 'Prix (Kg) /DH',
+                v.prixtotal AS 'Prix Total /DH'
+            FROM 
+                ventes v
+            JOIN 
+                produits p ON p.IDProduit = v.produit_id
+            WHERE 
+                v.facture_id = @factureId";
 
                 using (MySqlConnection connection = new MySqlConnection(connexion.cnx.ConnectionString))
                 {
@@ -75,20 +76,20 @@ namespace GESTION_VENDEURS
                         DataTable dataTable = new DataTable();
                         adapter.Fill(dataTable);
 
-                        StringBuilder messageBuilder = new StringBuilder();
-                        foreach (DataRow row in dataTable.Rows)
-                        {
-                            foreach (var item in row.ItemArray)
-                            {
-                                messageBuilder.Append(item.ToString() + "\t");
-                            }
-                            messageBuilder.AppendLine();
-                        }
-
-                        MessageBox.Show(messageBuilder.ToString(), "Ventes de Facture");
-
+                        // Liaison du DataTable au DataGridView
                         tablevp.DataSource = dataTable;
-                        tablevp.Refresh();
+                    }
+
+                    // Maintenant, récupérons le prix net
+                    string queryPrixNet = "SELECT SUM(prixtotal) FROM ventes WHERE facture_id = @factureId";
+                    using (MySqlCommand cmd = new MySqlCommand(queryPrixNet, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@factureId", FactureId);
+                        object prixNetResult = cmd.ExecuteScalar();
+                        if (prixNetResult != null)
+                        {
+                            txtpn.Text = prixNetResult.ToString();
+                        }
                     }
                 }
             }
@@ -97,6 +98,7 @@ namespace GESTION_VENDEURS
                 MessageBox.Show("Erreur lors de la récupération des données des ventes de facture : " + ex.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
 
 
@@ -113,7 +115,51 @@ namespace GESTION_VENDEURS
 
         private void btn_consulter_Click(object sender, EventArgs e)
         {
-            AfficherVentesFacture();
+
+        }
+
+        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void gunaLabel3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtncc_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gunaLabel4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gunaLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtdcc_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtnf_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gunaLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtcinc_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
