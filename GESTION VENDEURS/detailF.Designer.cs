@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(detailF));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btn_consulter = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtprixnet = new System.Windows.Forms.Label();
+            this.txtpn = new Guna.UI.WinForms.GunaTextBox();
             this.txtdcc = new Guna.UI.WinForms.GunaTextBox();
             this.txtcinc = new Guna.UI.WinForms.GunaTextBox();
             this.txtncc = new Guna.UI.WinForms.GunaTextBox();
@@ -43,9 +44,7 @@
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.tablevp = new Guna.UI.WinForms.GunaDataGridView();
-            this.txtprixnet = new System.Windows.Forms.Label();
-            this.txtpn = new Guna.UI.WinForms.GunaTextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablevp)).BeginInit();
             this.SuspendLayout();
@@ -56,7 +55,6 @@
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Controls.Add(this.txtprixnet);
             this.guna2Panel1.Controls.Add(this.txtpn);
-            this.guna2Panel1.Controls.Add(this.btn_consulter);
             this.guna2Panel1.Controls.Add(this.txtdcc);
             this.guna2Panel1.Controls.Add(this.txtcinc);
             this.guna2Panel1.Controls.Add(this.txtncc);
@@ -72,41 +70,52 @@
             this.guna2Panel1.TabIndex = 2;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
-            // btn_consulter
+            // label1
             // 
-            this.btn_consulter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_consulter.AnimationHoverSpeed = 0.07F;
-            this.btn_consulter.AnimationSpeed = 0.03F;
-            this.btn_consulter.BackColor = System.Drawing.Color.Transparent;
-            this.btn_consulter.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.btn_consulter.BorderColor = System.Drawing.Color.Black;
-            this.btn_consulter.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.btn_consulter.CheckedBorderColor = System.Drawing.Color.Black;
-            this.btn_consulter.CheckedForeColor = System.Drawing.Color.White;
-            this.btn_consulter.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btn_consulter.CheckedImage")));
-            this.btn_consulter.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.btn_consulter.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_consulter.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_consulter.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_consulter.ForeColor = System.Drawing.Color.White;
-            this.btn_consulter.Image = null;
-            this.btn_consulter.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btn_consulter.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_consulter.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btn_consulter.Location = new System.Drawing.Point(1256, 279);
-            this.btn_consulter.Name = "btn_consulter";
-            this.btn_consulter.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btn_consulter.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_consulter.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_consulter.OnHoverImage = null;
-            this.btn_consulter.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btn_consulter.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_consulter.Radius = 20;
-            this.btn_consulter.Size = new System.Drawing.Size(196, 63);
-            this.btn_consulter.TabIndex = 45;
-            this.btn_consulter.Text = "Consulter ";
-            this.btn_consulter.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btn_consulter.Click += new System.EventHandler(this.btn_consulter_Click);
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.label1.Location = new System.Drawing.Point(1401, 384);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 25);
+            this.label1.TabIndex = 54;
+            this.label1.Text = "/DHS";
+            // 
+            // txtprixnet
+            // 
+            this.txtprixnet.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtprixnet.AutoSize = true;
+            this.txtprixnet.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.txtprixnet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtprixnet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.txtprixnet.Location = new System.Drawing.Point(1070, 384);
+            this.txtprixnet.Name = "txtprixnet";
+            this.txtprixnet.Size = new System.Drawing.Size(101, 25);
+            this.txtprixnet.TabIndex = 53;
+            this.txtprixnet.Text = "PrixNet : ";
+            // 
+            // txtpn
+            // 
+            this.txtpn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtpn.BackColor = System.Drawing.Color.Transparent;
+            this.txtpn.BaseColor = System.Drawing.Color.White;
+            this.txtpn.BorderColor = System.Drawing.Color.Silver;
+            this.txtpn.BorderSize = 0;
+            this.txtpn.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtpn.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtpn.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtpn.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtpn.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpn.Location = new System.Drawing.Point(1176, 363);
+            this.txtpn.Name = "txtpn";
+            this.txtpn.PasswordChar = '\0';
+            this.txtpn.Radius = 20;
+            this.txtpn.SelectedText = "";
+            this.txtpn.Size = new System.Drawing.Size(219, 63);
+            this.txtpn.TabIndex = 52;
+            this.txtpn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtdcc
             // 
@@ -306,52 +315,12 @@
             this.tablevp.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.tablevp.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // txtprixnet
+            // mySqlCommand1
             // 
-            this.txtprixnet.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtprixnet.AutoSize = true;
-            this.txtprixnet.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.txtprixnet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtprixnet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.txtprixnet.Location = new System.Drawing.Point(1055, 412);
-            this.txtprixnet.Name = "txtprixnet";
-            this.txtprixnet.Size = new System.Drawing.Size(101, 25);
-            this.txtprixnet.TabIndex = 53;
-            this.txtprixnet.Text = "PrixNet : ";
-            // 
-            // txtpn
-            // 
-            this.txtpn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtpn.BackColor = System.Drawing.Color.Transparent;
-            this.txtpn.BaseColor = System.Drawing.Color.White;
-            this.txtpn.BorderColor = System.Drawing.Color.Silver;
-            this.txtpn.BorderSize = 0;
-            this.txtpn.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtpn.FocusedBaseColor = System.Drawing.Color.White;
-            this.txtpn.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txtpn.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtpn.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpn.Location = new System.Drawing.Point(1161, 391);
-            this.txtpn.Name = "txtpn";
-            this.txtpn.PasswordChar = '\0';
-            this.txtpn.Radius = 20;
-            this.txtpn.SelectedText = "";
-            this.txtpn.Size = new System.Drawing.Size(219, 63);
-            this.txtpn.TabIndex = 52;
-            this.txtpn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.label1.Location = new System.Drawing.Point(1386, 412);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 25);
-            this.label1.TabIndex = 54;
-            this.label1.Text = "/DHS";
+            this.mySqlCommand1.CacheAge = 0;
+            this.mySqlCommand1.Connection = null;
+            this.mySqlCommand1.EnableCaching = false;
+            this.mySqlCommand1.Transaction = null;
             // 
             // detailF
             // 
@@ -375,7 +344,6 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI.WinForms.GunaAdvenceButton btn_consulter;
         private Guna.UI.WinForms.GunaTextBox txtdcc;
         private Guna.UI.WinForms.GunaTextBox txtcinc;
         private Guna.UI.WinForms.GunaTextBox txtncc;
@@ -388,5 +356,6 @@
         private System.Windows.Forms.Label txtprixnet;
         private Guna.UI.WinForms.GunaTextBox txtpn;
         private System.Windows.Forms.Label label1;
+        private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
     }
 }

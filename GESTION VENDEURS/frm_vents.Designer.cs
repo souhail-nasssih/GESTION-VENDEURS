@@ -28,11 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_vents));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_vents));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btn_paye = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.txtprixnet = new System.Windows.Forms.Label();
+            this.txtpn = new Guna.UI.WinForms.GunaTextBox();
             this.modifier = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaAdvenceButton1 = new Guna.UI.WinForms.GunaAdvenceButton();
             this.txtprix = new Guna.UI.WinForms.GunaTextBox();
@@ -52,9 +55,7 @@
             this.txtnv = new Guna.UI.WinForms.GunaTextBox();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.tableproduits = new Guna.UI.WinForms.GunaDataGridView();
-            this.txtpn = new Guna.UI.WinForms.GunaTextBox();
-            this.txtprixnet = new System.Windows.Forms.Label();
-            this.btn_paye = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.guna2Panel1.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableproduits)).BeginInit();
@@ -89,6 +90,78 @@
             this.guna2Panel1.Size = new System.Drawing.Size(1753, 443);
             this.guna2Panel1.TabIndex = 0;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
+            // 
+            // btn_paye
+            // 
+            this.btn_paye.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_paye.AnimationHoverSpeed = 0.07F;
+            this.btn_paye.AnimationSpeed = 0.03F;
+            this.btn_paye.BackColor = System.Drawing.Color.Transparent;
+            this.btn_paye.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.btn_paye.BorderColor = System.Drawing.Color.Black;
+            this.btn_paye.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.btn_paye.CheckedBorderColor = System.Drawing.Color.Black;
+            this.btn_paye.CheckedForeColor = System.Drawing.Color.White;
+            this.btn_paye.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btn_paye.CheckedImage")));
+            this.btn_paye.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.btn_paye.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_paye.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_paye.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_paye.ForeColor = System.Drawing.Color.White;
+            this.btn_paye.Image = null;
+            this.btn_paye.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_paye.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_paye.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btn_paye.Location = new System.Drawing.Point(1592, 365);
+            this.btn_paye.Name = "btn_paye";
+            this.btn_paye.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_paye.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_paye.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_paye.OnHoverImage = null;
+            this.btn_paye.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btn_paye.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_paye.Radius = 20;
+            this.btn_paye.Size = new System.Drawing.Size(138, 63);
+            this.btn_paye.TabIndex = 52;
+            this.btn_paye.Text = "Valider";
+            this.btn_paye.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_paye.Click += new System.EventHandler(this.btn_paye_Click);
+            // 
+            // txtprixnet
+            // 
+            this.txtprixnet.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtprixnet.AutoSize = true;
+            this.txtprixnet.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.txtprixnet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtprixnet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.txtprixnet.Location = new System.Drawing.Point(1234, 389);
+            this.txtprixnet.Name = "txtprixnet";
+            this.txtprixnet.Size = new System.Drawing.Size(101, 25);
+            this.txtprixnet.TabIndex = 51;
+            this.txtprixnet.Text = "PrixNet : ";
+            // 
+            // txtpn
+            // 
+            this.txtpn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtpn.BackColor = System.Drawing.Color.Transparent;
+            this.txtpn.BaseColor = System.Drawing.Color.White;
+            this.txtpn.BorderColor = System.Drawing.Color.Silver;
+            this.txtpn.BorderSize = 0;
+            this.txtpn.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtpn.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtpn.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtpn.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtpn.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpn.Location = new System.Drawing.Point(1361, 365);
+            this.txtpn.Name = "txtpn";
+            this.txtpn.PasswordChar = '\0';
+            this.txtpn.Radius = 20;
+            this.txtpn.ReadOnly = true;
+            this.txtpn.SelectedText = "";
+            this.txtpn.Size = new System.Drawing.Size(198, 63);
+            this.txtpn.TabIndex = 50;
+            this.txtpn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtpn.TextChanged += new System.EventHandler(this.txtpn_TextChanged);
             // 
             // modifier
             // 
@@ -183,6 +256,7 @@
             this.txtprix.TabIndex = 47;
             this.txtprix.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtprix.TextChanged += new System.EventHandler(this.txtprix_TextChanged);
+            this.txtprix.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtprix_KeyPress);
             // 
             // label4
             // 
@@ -292,6 +366,7 @@
             this.txtqv.TabIndex = 41;
             this.txtqv.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtqv.TextChanged += new System.EventHandler(this.txtqv_TextChanged);
+            this.txtqv.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtprix_KeyPress);
             // 
             // label6
             // 
@@ -525,76 +600,21 @@
             this.tableproduits.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.tableproduits.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableproduits_CellContentClick);
             // 
-            // txtpn
+            // guna2ContextMenuStrip1
             // 
-            this.txtpn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtpn.BackColor = System.Drawing.Color.Transparent;
-            this.txtpn.BaseColor = System.Drawing.Color.White;
-            this.txtpn.BorderColor = System.Drawing.Color.Silver;
-            this.txtpn.BorderSize = 0;
-            this.txtpn.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtpn.FocusedBaseColor = System.Drawing.Color.White;
-            this.txtpn.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txtpn.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtpn.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpn.Location = new System.Drawing.Point(1309, 365);
-            this.txtpn.Name = "txtpn";
-            this.txtpn.PasswordChar = '\0';
-            this.txtpn.Radius = 20;
-            this.txtpn.SelectedText = "";
-            this.txtpn.Size = new System.Drawing.Size(198, 63);
-            this.txtpn.TabIndex = 50;
-            this.txtpn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtpn.TextChanged += new System.EventHandler(this.txtpn_TextChanged);
-            // 
-            // txtprixnet
-            // 
-            this.txtprixnet.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtprixnet.AutoSize = true;
-            this.txtprixnet.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.txtprixnet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtprixnet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.txtprixnet.Location = new System.Drawing.Point(1182, 389);
-            this.txtprixnet.Name = "txtprixnet";
-            this.txtprixnet.Size = new System.Drawing.Size(101, 25);
-            this.txtprixnet.TabIndex = 51;
-            this.txtprixnet.Text = "PrixNet : ";
-            // 
-            // btn_paye
-            // 
-            this.btn_paye.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_paye.AnimationHoverSpeed = 0.07F;
-            this.btn_paye.AnimationSpeed = 0.03F;
-            this.btn_paye.BackColor = System.Drawing.Color.Transparent;
-            this.btn_paye.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.btn_paye.BorderColor = System.Drawing.Color.Black;
-            this.btn_paye.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.btn_paye.CheckedBorderColor = System.Drawing.Color.Black;
-            this.btn_paye.CheckedForeColor = System.Drawing.Color.White;
-            this.btn_paye.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btn_paye.CheckedImage")));
-            this.btn_paye.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.btn_paye.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_paye.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_paye.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_paye.ForeColor = System.Drawing.Color.White;
-            this.btn_paye.Image = null;
-            this.btn_paye.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btn_paye.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_paye.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btn_paye.Location = new System.Drawing.Point(1551, 365);
-            this.btn_paye.Name = "btn_paye";
-            this.btn_paye.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btn_paye.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_paye.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_paye.OnHoverImage = null;
-            this.btn_paye.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btn_paye.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_paye.Radius = 20;
-            this.btn_paye.Size = new System.Drawing.Size(138, 63);
-            this.btn_paye.TabIndex = 52;
-            this.btn_paye.Text = "Valider";
-            this.btn_paye.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btn_paye.Click += new System.EventHandler(this.btn_paye_Click);
+            this.guna2ContextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.guna2ContextMenuStrip1.Name = "guna2ContextMenuStrip1";
+            this.guna2ContextMenuStrip1.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.guna2ContextMenuStrip1.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
+            this.guna2ContextMenuStrip1.RenderStyle.ColorTable = null;
+            this.guna2ContextMenuStrip1.RenderStyle.RoundedEdges = true;
+            this.guna2ContextMenuStrip1.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.guna2ContextMenuStrip1.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.guna2ContextMenuStrip1.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.guna2ContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.guna2ContextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.guna2ContextMenuStrip1_Opening);
             // 
             // frm_vents
             // 
@@ -642,5 +662,6 @@
         private System.Windows.Forms.Label txtprixnet;
         private Guna.UI.WinForms.GunaTextBox txtpn;
         private Guna.UI.WinForms.GunaAdvenceButton btn_paye;
+        private Guna.UI2.WinForms.Guna2ContextMenuStrip guna2ContextMenuStrip1;
     }
 }

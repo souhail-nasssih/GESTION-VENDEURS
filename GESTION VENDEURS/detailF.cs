@@ -162,5 +162,10 @@ namespace GESTION_VENDEURS
         {
 
         }
+
+        private void printPreviewControl1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

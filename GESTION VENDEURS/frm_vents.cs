@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Asn1.Ocsp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -388,19 +389,56 @@ namespace GESTION_VENDEURS
         }
         private void btn_paye_Click(object sender, EventArgs e)
         {
-            AfficherRapportVentes();
+            AfficherRapportVentes(idCV,numeroFacture);
         }
-        private void AfficherRapportVentes()
+        private void AfficherRapportVentes(int CV_id, int facture_id)
         {
+            // Récupérer les données des ventes en utilisant la méthode AfficherVent
+            Vents v=new Vents();
+            DataTable dataTableVentes = v.AfficherVent(CV_id, facture_id); // Appeler la méthode AfficherVent depuis l'instance vents
+
+            // Vérifier si le DataTable contient des lignes
+            if (dataTableVentes.Rows.Count == 0)
+            {
+                MessageBox.Show("Veuillez ajouter des ventes avant de générer le rapport.", "Aucune vente à afficher", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
             // Créer le contenu du rapport
             StringBuilder rapportBuilder = new StringBuilder();
             rapportBuilder.AppendLine("Rapport des ventes :");
             rapportBuilder.AppendLine("-----------------------");
-            // Ajoutez le contenu de votre rapport ici, par exemple, les données de votre DataGridView
+
+            // Parcourir toutes les lignes du DataTable pour ajouter les données de chaque vente dans le rapport
+            foreach (DataRow row in dataTableVentes.Rows)
+            {
+                // Vérifier si la colonne "Nom Produit" existe et si sa valeur n'est pas null
+                if (dataTableVentes.Columns.Contains("Nom Produit") && row["Nom Produit"] != DBNull.Value)
+                {
+                    // Récupérer les valeurs des autres colonnes nécessaires pour le rapport
+                    string nomProduit = row["Nom Produit"].ToString();
+                    float prix = Convert.ToSingle(row["Prix (Kg) /DH"]);
+                    float quantite = Convert.ToSingle(row["QTE"]);
+                    float prixTotal = Convert.ToSingle(row["Prix /DH"]);
+
+                    // Ajouter les données de la vente dans le rapport
+                    rapportBuilder.AppendLine($"Produit : {nomProduit} | Prix : {prix} DH | Quantité : {quantite} | Prix Total : {prixTotal} DH");
+                }
+                else
+                {
+                    MessageBox.Show("La ligne sélectionnée ne contient pas de valeur pour la colonne 'Nom Produit'.", "Erreur de données", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+
+            // Ajouter le prix total à la fin du rapport
+            rapportBuilder.AppendLine("-----------------------");
+            rapportBuilder.AppendLine($"Prix total : {prixNet} DH");
 
             // Afficher le rapport dans une nouvelle fenêtre
             MessageBox.Show(rapportBuilder.ToString(), "Rapport des ventes", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+
         private void label4_Click(object sender, EventArgs e)
         {
 
@@ -431,5 +469,19 @@ namespace GESTION_VENDEURS
 
         }
 
+        private void txtprix_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Vérifier si la touche pressée n'est pas un chiffre et n'est pas une touche de contrôle
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                // Annuler la pression de la touche
+                e.Handled = true;
+            }
+        }
+
+        private void guna2ContextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
     }
 }

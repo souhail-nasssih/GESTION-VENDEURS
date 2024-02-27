@@ -78,7 +78,7 @@ namespace GESTION_VENDEURS
 
         public DataTable AfficherClients()
         {
-            MessageBox.Show("Valeur de Global.cinVendeur : " + Global.cinVendeur);
+          //  MessageBox.Show("Valeur de Global.cinVendeur : " + Global.cinVendeur);
 
             DataTable dataTable = new DataTable();
 
