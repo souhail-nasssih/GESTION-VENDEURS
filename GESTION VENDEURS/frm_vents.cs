@@ -338,7 +338,7 @@ namespace GESTION_VENDEURS
                 float prixTotal = prix * quantite;
 
                 // Mettez à jour les valeurs de la ligne sélectionnée dans le DataGridView
-                tableproduits.SelectedRows[0].Cells["NomProduit"].Value = boxpro.Text;
+                tableproduits.SelectedRows[0].Cells["Nom Produit"].Value = boxpro.Text;
                 tableproduits.SelectedRows[0].Cells["Prix /DH"].Value = prix;
                 tableproduits.SelectedRows[0].Cells["qte"].Value = quantite;
 
